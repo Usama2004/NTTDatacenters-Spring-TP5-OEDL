@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Buscar Cliente</title>
+</head>
+<body>
+    <h1>Buscar Cliente</h1>
+    <form th:action="@{/clientes/buscar}" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" />
+        <button type="submit">Buscar por Nombre</button>
+    </form>
+    <form th:action="@{/clientes/buscarPorApellidos}" method="post">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" />
+        <button type="submit">Buscar por Apellidos</button>
+    </form>
+    <a href="/clientes">Volver a la Lista</a>
+</body>
+</html>
